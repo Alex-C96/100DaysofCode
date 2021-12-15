@@ -7,9 +7,6 @@ import hangman_words as words
 
 chosen_word = random.choice(words.word_list)
 
-#Testing code
-print(f'Pssst, the solution is {chosen_word}.')
-
 display = []
 word_length = len(chosen_word)
 for _ in range(word_length):
@@ -29,7 +26,6 @@ while not end_of_game:
     # adds correct letters to display list
     for position in range(word_length):
         letter = chosen_word[position]
-        #print(f"Current position: {position}\n Current letter: {letter}\n Guessed letter: {guess}")
         if letter == guess:
             display[position] = letter
 
