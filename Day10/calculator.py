@@ -48,6 +48,7 @@ def calculator():
         num2 = float(input('What\'s the next number?: '))
         # get the function from the dictionary, operations
         function = operations[symbol]
+        # Handle division by zero
         try:
             result = function(num1, num2)
             print(f'{num1} {symbol} {num2} = {result}')
@@ -55,6 +56,7 @@ def calculator():
         except ZeroDivisionError as err:
             print('Handling invalid input:', err)
             cont = 'n'
+
         if cont == 'y':
             num1 = result
         else:
